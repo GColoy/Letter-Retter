@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54dbaf02d074b8439639025d57d905f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTester
-  dialogueSystem: {fileID: 0}
+  dialogueSystem: {fileID: 611427931}
 --- !u!4 &1558684839
 Transform:
   m_ObjectHideFlags: 0
