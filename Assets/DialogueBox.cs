@@ -16,8 +16,10 @@ public class Dialogue : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        textComponent.text = string.Empty;
-        StartDialogue();
+        if (lines.Length == 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -38,10 +40,17 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+     //recieve Dialogue and start
+    public void RecieveDialogue(string[] text)
     {
         gameObject.SetActive(true); 
-        index = 0; 
+        lines = text;
+        index = 0;
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        textComponent.text = string.Empty;
         typingCoroutine = StartCoroutine(TypeLine());
     }
 
@@ -67,15 +76,5 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false); 
         }
-    }
-
-    //recieve Dialogue and start
-    public void RecieveDialogue(string[] text)
-    {
-        lines = text;
-        index = 0;
-        textComponent.text = string.Empty;
-        gameObject.SetActive(true); 
-        typingCoroutine = StartCoroutine(TypeLine());
     }
 }
