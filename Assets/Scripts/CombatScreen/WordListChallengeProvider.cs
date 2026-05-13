@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace CombatScreen
 {
-    class WordListChallangeProvider : ChallengeProvider
+    class WordListChallengeProvider : ChallengeProvider
     {
         public List<string> ChallengeList = new List<string>();
         private int index = 0;

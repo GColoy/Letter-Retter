@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ccb8a52383a458a9400e24847c8561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatCoordinator
-  challangeProvider: {fileID: 1113685292}
+  challengeProvider: {fileID: 1113685292}
   wordDetector: {fileID: 1113685293}
   typingDisplay: {fileID: 883647049}
 --- !u!4 &1113685290
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19d4614dd01ac8209f5ec3b32842dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.WordListChallangeProvider
-  ChallangeList:
+  ChallengeList:
   - origins
   - of
   - the
