@@ -2,15 +2,15 @@ using System.Collections.Generic;
 
 namespace CombatScreen
 {
-    class WordListChallangeProvider : ChallangeProvider
+    class WordListChallangeProvider : ChallengeProvider
     {
-        public List<string> ChallangeList = new List<string>();
+        public List<string> ChallengeList = new List<string>();
         private int index = 0;
 
-        public override string getNextChallange()
+        public override string getNextChallenge()
         {
-            string item = ChallangeList[index];
-            index = (index + 1) % ChallangeList.Count;
+            string item = ChallengeList[index];
+            index = (index + 1) % ChallengeList.Count;
             return item;
         }
     }

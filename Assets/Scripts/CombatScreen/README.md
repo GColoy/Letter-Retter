@@ -18,7 +18,7 @@ It owns three references that you assign in the Unity inspector:
 │  CombatCoordinator  │  ← drives the loop in Update()
 └──────────┬──────────┘
            │ references (set in inspector)
-           ├──────────────► ChallangeProvider   "what should the player type next?"
+           ├──────────────► ChallengeProvider   "what should the player type next?"
            ├──────────────► WordDetector        "what has the player typed so far?"
            └──────────────► TypingDisplay       "show progress on screen"
 
@@ -26,7 +26,7 @@ It owns three references that you assign in the Unity inspector:
                               └─► TypingDetector  "raw keystrokes from somewhere"
 ```
 
-The three abstract base classes (`ChallangeProvider`, `TypingDetector`,
+The three abstract base classes (`ChallengeProvider`, `TypingDetector`,
 `TypingDisplay`) are the **extension points**. To change behaviour, write a
 new subclass and drop it on a GameObject in the scene — no changes to
 `CombatCoordinator` needed.
@@ -35,7 +35,7 @@ new subclass and drop it on a GameObject in the scene — no changes to
 
 Inside [CombatCoordinator.cs](CombatCoordinator.cs):
 
-1. **Start** — ask the `ChallangeProvider` for a challenge string, hand it
+1. **Start** — ask the `ChallengeProvider` for a challenge string, hand it
    to the `TypingDisplay` so the player can see it.
 2. **Every frame** — ask the `WordDetector` for what the player has typed,
    pass it to the `TypingDisplay` so it can colour letters as correct /
@@ -54,15 +54,15 @@ The only `MonoBehaviour` that contains gameplay logic. Lives on a single
 GameObject in the scene. If you need to add scoring, win/lose, combos,
 timers — this is where it goes.
 
-### `ChallangeProvider` ([ChallangeProvider.cs](ChallangeProvider.cs)) — abstract
+### `ChallengeProvider` ([ChallengeProvider.cs](ChallengeProvider.cs)) — abstract
 Returns the next string the player must type. One method:
-`string getNextChallange()`.
+`string getNextChallenge()`.
 
 Concrete implementations:
-- [RandomLetterChallangeProvider.cs](RandomLetterChallangeProvider.cs) —
+- [RandomLetterChallengeProvider.cs](RandomLetterChallengeProvider.cs) —
   returns a random character from a configurable alphabet. Good for early
   game / testing.
-- [WordListChallangeProvider.cs](WordListChallangeProvider.cs) — cycles
+- [WordListChallengeProvider.cs](WordListChallengeProvider.cs) — cycles
   through a list of words set in the inspector.
 
 ### `TypingDetector` ([TypingDetector.cs](TypingDetector.cs)) — abstract
@@ -109,8 +109,8 @@ is attached and re-assign the inspector field on `CombatCoordinator` /
 
 Quick checklist when wiring a new scene from scratch:
 1. Add a GameObject, attach `CombatCoordinator`.
-2. Attach **one** `ChallangeProvider` subclass (e.g. `WordListChallangeProvider`)
-   and drag it into the `challangeProvider` slot.
+2. Attach **one** `ChallengeProvider` subclass (e.g. `WordListChallengeProvider`)
+   and drag it into the `ChallengeProvider` slot.
 3. Attach `WordDetector`, drag into the `wordDetector` slot.
 4. Attach **one** `TypingDetector` subclass (e.g. `KeyboardTypingDetector`)
    and drag it into `WordDetector`'s `typingDetector` slot.
@@ -121,18 +121,18 @@ Quick checklist when wiring a new scene from scratch:
 ## How to extend
 
 ### Add a new kind of challenge
-Subclass `ChallangeProvider`, implement `getNextChallange()`, attach to a
-GameObject, drag into the coordinator's `challangeProvider` field.
+Subclass `ChallengeProvider`, implement `getNextChallenge()`, attach to a
+GameObject, drag into the coordinator's `ChallengeProvider` field.
 
 ```csharp
 namespace CombatScreen
 {
-    class TimedDifficultyChallangeProvider : ChallangeProvider
+    class TimedDifficultyChallengeProvider : ChallengeProvider
     {
         [SerializeField] List<string> easy;
         [SerializeField] List<string> hard;
 
-        public override string getNextChallange()
+        public override string getNextChallenge()
         {
             var pool = Time.timeSinceLevelLoad > 30 ? hard : easy;
             return pool[Random.Range(0, pool.Count)];
@@ -165,10 +165,10 @@ ignorant of who's listening.
 
 ## Known rough edges
 
-- "Challange" is misspelled throughout (should be "Challenge"). If you
+- "Challenge" is misspelled throughout (should be "Challenge"). If you
   rename, do it as one commit with a global replace so meta-file GUIDs
   stay attached.
-- Method naming is mixed (`getNextChallange`, `get_latest_keys`,
+- Method naming is mixed (`getNextChallenge`, `get_latest_keys`,
   `new_word`, `initializeText`). C# convention is `PascalCase` for public
   methods — feel free to normalise when you touch a file.
 - The class-level summary on `CombatCoordinator` mentions scoring and a

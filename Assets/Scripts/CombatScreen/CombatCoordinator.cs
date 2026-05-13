@@ -15,7 +15,7 @@ namespace CombatScreen
     class CombatCoordinator : MonoBehaviour
     {
         /// <summary>Supplies the string the player must type next.</summary>
-        [SerializeField] ChallangeProvider challangeProvider;
+        [SerializeField] ChallengeProvider challengeProvider;
         /// <summary>Tracks the player's cumulative typed string for the current challenge.</summary>
         [SerializeField] WordDetector wordDetector;
         /// <summary>Renders the goal and the player's progress on screen.</summary>
@@ -25,7 +25,7 @@ namespace CombatScreen
 
         void Start()
         {
-            goal = challangeProvider.getNextChallange();
+            goal = challengeProvider.getNextChallenge();
             typingDisplay.initializeText(goal);
         }
         void Update()
@@ -34,7 +34,7 @@ namespace CombatScreen
             typingDisplay.displayProgress(typed);
             if (typed == goal)
             {
-                goal = challangeProvider.getNextChallange();
+                goal = challengeProvider.getNextChallenge();
                 typingDisplay.initializeText(goal);
                 wordDetector.new_word();
             }
