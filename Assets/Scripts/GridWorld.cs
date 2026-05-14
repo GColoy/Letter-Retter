@@ -71,10 +71,6 @@ public class GridWorld : MonoBehaviour
             sr.color = ((x + y) % 2 == 0) ? tileColorA : tileColorB;
         }
 
-        // Box Collider so raycasts (for object placement) hit the grid
-        BoxCollider2D col = tile.AddComponent<BoxCollider2D>();
-        col.size = Vector2.one * tileSize;
-
         // Store grid coords for easy lookup
         TileData data = tile.AddComponent<TileData>();
         data.gridX = x;
