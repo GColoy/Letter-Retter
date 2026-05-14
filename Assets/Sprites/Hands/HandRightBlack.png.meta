@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: -8461580876025967736
     second: HandRightBlack_0
-  - first:
-      213: -319072484758629389
-    second: HandRightBlack_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,12 +116,12 @@ TextureImporter:
       name: HandRightBlack_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 997
-        width: 1802
-        height: 1874
+        x: 0
+        y: 0
+        width: 1800
+        height: 2461
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,33 +134,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: HandRightBlack_1
-      rect:
-        serializedVersion: 2
-        x: 1525
-        y: 405
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f35c50044d629bf0800000000000000
-      internalID: -319072484758629389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 820fbca0bee4833448ca378389edfd85
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +149,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       HandRightBlack_0: -8461580876025967736
-      HandRightBlack_1: -319072484758629389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
