@@ -2171,137 +2171,165 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VisualizeKeyFinger
   handLeft: {fileID: 1831648068}
   handRight: {fileID: 1520638667}
+  handIdleLeft: {fileID: -5878413400083022542, guid: 9c20b595f708809458c11b7bc56a5c35, type: 3}
+  handIdleRight: {fileID: -8461580876025967736, guid: 7a894530e0378ad48b37bd84c8814e52, type: 3}
   keyMappings:
   - key: A
     keyImage: {fileID: 964318980}
     handSprite: {fileID: 8956216294576424721, guid: 4de36a935f5528644a159d890fa04bdc, type: 3}
     keySprite: {fileID: 4718011805021895259, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -6210715490797717745, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: B
     keyImage: {fileID: 517326588}
     handSprite: {fileID: 180838668462545558, guid: ed946b62e345df949bcc5db872733484, type: 3}
     keySprite: {fileID: -9196239750629099692, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 1137314997904504064, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: C
     keyImage: {fileID: 42741821}
     handSprite: {fileID: 8055871305427976257, guid: 0a2a2fa4b51041b4783274c14d328b7e, type: 3}
     keySprite: {fileID: -7946123853552766301, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -8954654912002913096, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: D
     keyImage: {fileID: 44691120}
     handSprite: {fileID: 8055871305427976257, guid: 0a2a2fa4b51041b4783274c14d328b7e, type: 3}
     keySprite: {fileID: -1881230927827980895, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 8562172169669801022, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: E
     keyImage: {fileID: 341143432}
     handSprite: {fileID: 8055871305427976257, guid: 0a2a2fa4b51041b4783274c14d328b7e, type: 3}
     keySprite: {fileID: -5202975443418401982, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -7531416249839506166, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: F
     keyImage: {fileID: 965115470}
     handSprite: {fileID: 180838668462545558, guid: ed946b62e345df949bcc5db872733484, type: 3}
     keySprite: {fileID: -6140194152627056981, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 7092275256151791679, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: G
     keyImage: {fileID: 1009576579}
     handSprite: {fileID: 180838668462545558, guid: ed946b62e345df949bcc5db872733484, type: 3}
     keySprite: {fileID: 6105193887162674583, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -487159030911124578, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: H
     keyImage: {fileID: 434059423}
     handSprite: {fileID: -6943982289104039221, guid: 100e411a5e6c9b34db9b53ba16e9f939, type: 3}
     keySprite: {fileID: 3997845931502703700, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -9190723134210329954, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: I
     keyImage: {fileID: 1529301340}
     handSprite: {fileID: -5477972566094145761, guid: b71a5a8975453e843a6749f89ca6be01, type: 3}
     keySprite: {fileID: -1078953514513365575, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 5033704341665645886, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: J
     keyImage: {fileID: 1263405907}
     handSprite: {fileID: -6943982289104039221, guid: 100e411a5e6c9b34db9b53ba16e9f939, type: 3}
     keySprite: {fileID: 3868391760271821838, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 5863216589445059427, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: K
     keyImage: {fileID: 1632410742}
     handSprite: {fileID: -5477972566094145761, guid: b71a5a8975453e843a6749f89ca6be01, type: 3}
     keySprite: {fileID: 4963614312095941097, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 8393517171338804362, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: L
     keyImage: {fileID: 1575946018}
     handSprite: {fileID: 6775775415294325583, guid: 3e0a0b7688d7c6240b18c981068a9893, type: 3}
     keySprite: {fileID: -5711937070466633758, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 2044846406085582471, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: M
     keyImage: {fileID: 652869348}
     handSprite: {fileID: -6943982289104039221, guid: 100e411a5e6c9b34db9b53ba16e9f939, type: 3}
     keySprite: {fileID: 5784931824346783123, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 7361456166493818091, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: N
     keyImage: {fileID: 144461710}
     handSprite: {fileID: -6943982289104039221, guid: 100e411a5e6c9b34db9b53ba16e9f939, type: 3}
     keySprite: {fileID: 7236284394022690221, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -4225236650381370779, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: O
     keyImage: {fileID: 785830837}
     handSprite: {fileID: 6775775415294325583, guid: 3e0a0b7688d7c6240b18c981068a9893, type: 3}
     keySprite: {fileID: 3373160756230112625, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -3153434809438657776, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: P
     keyImage: {fileID: 1491517028}
     handSprite: {fileID: 7768678585754792576, guid: 2596a7758746bda4995d8ea9574a293c, type: 3}
     keySprite: {fileID: 3702254854033267122, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 3569966695452857803, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: Q
     keyImage: {fileID: 1075947482}
     handSprite: {fileID: 180838668462545558, guid: ed946b62e345df949bcc5db872733484, type: 3}
     keySprite: {fileID: -3121832391400126424, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -7717256096562300802, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: R
     keyImage: {fileID: 246799298}
     handSprite: {fileID: 180838668462545558, guid: ed946b62e345df949bcc5db872733484, type: 3}
     keySprite: {fileID: 1447999804025390277, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -8709590959519885013, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: S
     keyImage: {fileID: 1062816698}
     handSprite: {fileID: 3667983328774815498, guid: f4cefaf16e38b2c4b8a09e273e812e5b, type: 3}
     keySprite: {fileID: -2096359014382748475, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 5175740602991189258, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: T
     keyImage: {fileID: 655553161}
     handSprite: {fileID: 180838668462545558, guid: ed946b62e345df949bcc5db872733484, type: 3}
     keySprite: {fileID: -6633909386609008065, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -6466772802292309623, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: U
     keyImage: {fileID: 814663549}
     handSprite: {fileID: -6943982289104039221, guid: 100e411a5e6c9b34db9b53ba16e9f939, type: 3}
     keySprite: {fileID: 3417980770386702127, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -3622911505351852149, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
   - key: V
     keyImage: {fileID: 1811664202}
     handSprite: {fileID: 180838668462545558, guid: ed946b62e345df949bcc5db872733484, type: 3}
     keySprite: {fileID: -8220235164248245729, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 3158812531594863585, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: W
     keyImage: {fileID: 1880618393}
     handSprite: {fileID: 3667983328774815498, guid: f4cefaf16e38b2c4b8a09e273e812e5b, type: 3}
     keySprite: {fileID: -4011065472134786342, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 8811548422867226316, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: X
     keyImage: {fileID: 1753677771}
     handSprite: {fileID: 3667983328774815498, guid: f4cefaf16e38b2c4b8a09e273e812e5b, type: 3}
     keySprite: {fileID: -6921103637322142296, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 619442795625693291, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: Y
     keyImage: {fileID: 1490294327}
     handSprite: {fileID: 8956216294576424721, guid: 4de36a935f5528644a159d890fa04bdc, type: 3}
     keySprite: {fileID: 4471073633757255121, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: 3092106999408172255, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 1
   - key: Z
     keyImage: {fileID: 1568045736}
     handSprite: {fileID: -6943982289104039221, guid: 100e411a5e6c9b34db9b53ba16e9f939, type: 3}
     keySprite: {fileID: 1455135642967840357, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
     keyPressedSprite: {fileID: -6383833780333300513, guid: 4b3198720c137b6499ae2ca6d723d4b8, type: 3}
+    isLeftHand: 0
 --- !u!1 &1558684837
 GameObject:
   m_ObjectHideFlags: 0
