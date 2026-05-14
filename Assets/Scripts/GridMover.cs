@@ -33,7 +33,7 @@ public class GridMover : MonoBehaviour
     [Header("Movement")]
     [Tooltip("Seconds it takes to slide one tile.")]
     [Range(0.05f, 0.5f)]
-    public float moveTime = 0.15f;
+    public float moveTime = 0.10f;
 
     [Tooltip("How long after landing before the next move is accepted (prevents double-steps).")]
     [Range(0f, 0.3f)]

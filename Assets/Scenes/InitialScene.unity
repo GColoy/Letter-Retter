@@ -340,7 +340,7 @@ MonoBehaviour:
   gridWorld: {fileID: 119710100}
   startGridX: 5
   startGridY: 5
-  moveTime: 0.15
+  moveTime: 0.1
   inputCooldown: 0.05
   sortingOrder: 2
 --- !u!212 &791140723
