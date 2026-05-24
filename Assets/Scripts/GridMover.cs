@@ -26,6 +26,9 @@ public class GridMover : MonoBehaviour
     [Tooltip("Drag the GridWorld GameObject here.")]
     public GridWorld gridWorld;
 
+    [Header("Animation")]
+    public Animator animator;
+
     [Header("Starting Position")]
     public int startGridX = 5;
     public int startGridY = 5;
@@ -157,6 +160,10 @@ public class GridMover : MonoBehaviour
         currentX = targetX;
         currentY = targetY;
 
+        animator?.SetFloat("MoveX", dx);
+        animator?.SetFloat("MoveY", dy);
+        animator?.SetFloat("Speed", 1f);
+
         // Animate
         StartCoroutine(SlideTo(gridWorld.GridToWorld(currentX, currentY)));
     }
@@ -177,6 +184,7 @@ public class GridMover : MonoBehaviour
 
         transform.position = target; // snap exactly on arrival
         isMoving           = false;
+        animator?.SetFloat("Speed", 0f); // idle
         cooldownTimer      = inputCooldown;
     }
 
