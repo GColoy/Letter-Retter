@@ -3,8 +3,25 @@ using UnityEngine.UI;
 using System.Collections.Generic; 
 using UnityEngine.InputSystem; 
 
+
+/// <summary>
+///Example Usage: 
+///public VisualizeKeyFinger visualizer;
+///void StarteTutorial()
+///{
+///  List<string> keys = new List<string> { "W", "A" };
+///  visualizer.ShowKeys(keys);
+///}
+///void BeendeTutorial()
+///{
+///  visualizer.HideVisualization();
+///}
+/// </summary>
+
+
 public class VisualizeKeyFinger : MonoBehaviour
 {
+    public GameObject overlay;
     [Header("Hand Settings")]
     public Image handLeft; 
     public Image handRight;
@@ -26,27 +43,27 @@ public class VisualizeKeyFinger : MonoBehaviour
     [Header("Key Mappings")]
     public List<KeyFingerMapping> keyMappings; 
 
-    //registers pressed keys and calls UpdateAppearance to change their looks and the corresponding finger
-    void Update()
-    {
-        if (Keyboard.current == null) return;
 
+    void Start()
+    {
+        HideOverlay(); 
+    }
+
+    //Hides the overlay
+    public void HideOverlay()
+    {
+        if (overlay != null)
+        {
+            overlay.SetActive(false);
+        }
+    }
+
+    //Resets every key and hand to its default sprite
+    private void ResetAllAppearances()
+    {
         foreach (var mapping in keyMappings)
         {
-            var control = Keyboard.current[mapping.key.ToLower()] as UnityEngine.InputSystem.Controls.KeyControl;
-
-            if (control != null)
-            {
-                if (control.wasPressedThisFrame)
-                {
-                    UpdateAppearance(mapping, true);
-                }
-                
-                if (control.wasReleasedThisFrame)
-                {
-                    UpdateAppearance(mapping, false);
-                }
-            }
+            UpdateAppearance(mapping, false);
         }
     }
 
@@ -64,6 +81,27 @@ public class VisualizeKeyFinger : MonoBehaviour
         if (targetHand != null)
         {
             targetHand.sprite = isPressed ? mapping.handSprite : idleSprite;
+        }
+    }
+
+    //activates the overlay and highlights the keys specified by that parameter
+    public void ShowKeys(List<string> keysToShow)
+    {
+        if (overlay != null)
+        {
+            overlay.SetActive(true);
+        }
+
+        //Reset all keys
+        ResetAllAppearances();
+
+        foreach (string keyName in keysToShow)
+        {
+            KeyFingerMapping mapping = keyMappings.Find(m => m.key.Equals(keyName, System.StringComparison.OrdinalIgnoreCase));
+            if (mapping.keyImage != null || mapping.handSprite != null)
+            {
+                UpdateAppearance(mapping, true);
+            }
         }
     }
 }
