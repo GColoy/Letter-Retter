@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic; 
-using UnityEngine.InputSystem; 
 
 
 /// <summary>
-///Example Usage: 
+///Example Usage in other class: 
 ///public VisualizeKeyFinger visualizer;
 ///void StarteTutorial()
 ///{
@@ -14,7 +13,7 @@ using UnityEngine.InputSystem;
 ///}
 ///void BeendeTutorial()
 ///{
-///  visualizer.HideVisualization();
+///  visualizer.HideOverlay();
 ///}
 /// </summary>
 

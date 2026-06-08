@@ -2169,6 +2169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7322ddd62a2ffc447b9de61f213aaef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisualizeKeyFinger
+  overlay: {fileID: 1545012789}
   handLeft: {fileID: 1831648068}
   handRight: {fileID: 1520638667}
   handIdleLeft: {fileID: -5878413400083022542, guid: 9c20b595f708809458c11b7bc56a5c35, type: 3}

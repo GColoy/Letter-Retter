@@ -4,6 +4,21 @@ using UnityEngine;
 using TMPro; 
 using UnityEngine.InputSystem; 
 
+
+/// <summary>
+/// Example Usage in other class: 
+/// public Dialogue dialogueBox; 
+/// void StartDialogue() 
+/// {
+///     string[] text = {
+///         "Hallo", 
+///         "Test"
+///     };
+///     dialogueBox.Show(text); 
+/// }
+/// </summary>
+
+
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent; 
@@ -16,10 +31,7 @@ public class Dialogue : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (lines.Length == 0)
-        {
-            gameObject.SetActive(false);
-        }
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,20 +40,28 @@ public class Dialogue : MonoBehaviour
         //if Left Mousebutton is pressed skip to next line or finish the current one 
         if(Mouse.current.leftButton.wasPressedThisFrame)
         {
+            if (lines == null || lines.Length == 0) 
+            {
+                return; 
+            }
+
             if (textComponent.text == lines[index])
             {
                 NextLine(); 
             }
             else
             {
-                StopCoroutine(typingCoroutine);
+                if(typingCoroutine != null)
+                {
+                    StopCoroutine(typingCoroutine);
+                }
                 textComponent.text = lines[index]; 
             }
         }
     }
 
-     //recieve Dialogue and start
-    public void RecieveDialogue(string[] text)
+    //recieve Dialogue and start
+    public void Show(string[] text)
     {
         gameObject.SetActive(true); 
         lines = text;
