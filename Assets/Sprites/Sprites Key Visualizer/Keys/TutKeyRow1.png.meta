@@ -1,49 +1,31 @@
 fileFormatVersion: 2
-guid: 5501438c79fa4834a80f133faf8c1bc0
+guid: 63457f391db90c14a832b83f86318404
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5914929139909681090
-    second: TutKeyRow4_0
+      213: -1443609049544277827
+    second: TutKeyRow1_0
   - first:
-      213: -5281564622860021428
-    second: TutKeyRow4_1
+      213: -7568040063856158109
+    second: TutKeyRow1_1
   - first:
-      213: -7386377620860687449
-    second: TutKeyRow4_2
+      213: -2328626710857815254
+    second: TutKeyRow1_2
   - first:
-      213: -7972088823790319232
-    second: TutKeyRow4_3
+      213: 3341109178915948663
+    second: TutKeyRow1_3
   - first:
-      213: 7667916963954930538
-    second: TutKeyRow4_4
+      213: 9127464804288157918
+    second: TutKeyRow1_4
   - first:
-      213: -2869026140553297400
-    second: TutKeyRow4_5
+      213: 4089010315854196614
+    second: TutKeyRow1_5
   - first:
-      213: 6785164354546954970
-    second: TutKeyRow4_6
+      213: 764310618916812047
+    second: TutKeyRow1_6
   - first:
-      213: 5196626037405074744
-    second: TutKeyRow4_7
-  - first:
-      213: 3010826561456217328
-    second: TutKeyRow4_8
-  - first:
-      213: -4323791940227247565
-    second: TutKeyRow4_9
-  - first:
-      213: 2785829184751646290
-    second: TutKeyRow4_10
-  - first:
-      213: -3611380386740158320
-    second: TutKeyRow4_11
-  - first:
-      213: -1638715086175011089
-    second: TutKeyRow4_12
-  - first:
-      213: -6130419439496077933
-    second: TutKeyRow4_13
+      213: -7787703753473223727
+    second: TutKeyRow1_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -85,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -152,12 +134,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TutKeyRow4_0
+      name: TutKeyRow1_0
       rect:
         serializedVersion: 2
         x: 17
-        y: 74
-        width: 32
+        y: 23
+        width: 28
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -167,19 +149,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e30a3103943f9eda0800000000000000
-      internalID: -5914929139909681090
+      spriteID: db0cf5fc73547fbe0800000000000000
+      internalID: -1443609049544277827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyRow4_1
+      name: TutKeyRow1_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 74
-        width: 22
+        x: 44
+        y: 23
+        width: 26
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,19 +171,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c41982c55fc14b6b0800000000000000
-      internalID: -5281564622860021428
+      spriteID: 36addebb8abe8f690800000000000000
+      internalID: -7568040063856158109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyRow4_2
+      name: TutKeyRow1_2
       rect:
         serializedVersion: 2
         x: 69
-        y: 74
-        width: 22
+        y: 23
+        width: 26
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -211,19 +193,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ab24b340b05e7990800000000000000
-      internalID: -7386377620860687449
+      spriteID: a2b65d4185e0fafd0800000000000000
+      internalID: -2328626710857815254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyRow4_3
+      name: TutKeyRow1_3
       rect:
         serializedVersion: 2
-        x: 90
-        y: 74
-        width: 22
+        x: 94
+        y: 23
+        width: 126
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -233,19 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 089cd14e3737d5190800000000000000
-      internalID: -7972088823790319232
+      spriteID: 7780515a8110e5e20800000000000000
+      internalID: 3341109178915948663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyRow4_4
+      name: TutKeyRow1_4
       rect:
         serializedVersion: 2
-        x: 111
-        y: 74
-        width: 22
+        x: 219
+        y: 23
+        width: 28
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -255,19 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a63b9b33ad9e96a60800000000000000
-      internalID: 7667916963954930538
+      spriteID: ed8d97f41e44bae70800000000000000
+      internalID: 9127464804288157918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyRow4_5
+      name: TutKeyRow1_5
       rect:
         serializedVersion: 2
-        x: 132
-        y: 74
-        width: 22
+        x: 246
+        y: 23
+        width: 28
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -277,19 +259,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 802c2090deb2f28d0800000000000000
-      internalID: -2869026140553297400
+      spriteID: 68fa56fb7351fb830800000000000000
+      internalID: 4089010315854196614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyRow4_6
+      name: TutKeyRow1_6
       rect:
         serializedVersion: 2
-        x: 153
-        y: 74
-        width: 22
+        x: 273
+        y: 23
+        width: 28
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -299,152 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad2f967f70fb92e50800000000000000
-      internalID: 6785164354546954970
+      spriteID: f05789a55706b9a00800000000000000
+      internalID: 764310618916812047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyRow4_7
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 74
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 835431e19df1e1840800000000000000
-      internalID: 5196626037405074744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TutKeyRow4_8
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 74
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fc98eb3eca98c920800000000000000
-      internalID: 3010826561456217328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TutKeyRow4_9
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 74
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 332de08832ecef3c0800000000000000
-      internalID: -4323791940227247565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TutKeyRow4_10
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 74
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 256b90232e049a620800000000000000
-      internalID: 2785829184751646290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TutKeyRow4_11
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 74
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0904a831cacc1edc0800000000000000
-      internalID: -3611380386740158320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TutKeyRow4_12
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 74
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: feef678bf4d1249e0800000000000000
-      internalID: -1638715086175011089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TutKeyRow4_13
+      name: TutKeyRow1_7
       rect:
         serializedVersion: 2
         x: 300
-        y: 57
+        y: 23
         width: 28
-        height: 41
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,8 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39ddfa800006ceaa0800000000000000
-      internalID: -6130419439496077933
+      spriteID: 1d3904e72b48ce390800000000000000
+      internalID: -7787703753473223727
       vertices: []
       indices: 
       edges: []
@@ -463,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -473,20 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TutKeyRow4_0: -5914929139909681090
-      TutKeyRow4_1: -5281564622860021428
-      TutKeyRow4_10: 2785829184751646290
-      TutKeyRow4_11: -3611380386740158320
-      TutKeyRow4_12: -1638715086175011089
-      TutKeyRow4_13: -6130419439496077933
-      TutKeyRow4_2: -7386377620860687449
-      TutKeyRow4_3: -7972088823790319232
-      TutKeyRow4_4: 7667916963954930538
-      TutKeyRow4_5: -2869026140553297400
-      TutKeyRow4_6: 6785164354546954970
-      TutKeyRow4_7: 5196626037405074744
-      TutKeyRow4_8: 3010826561456217328
-      TutKeyRow4_9: -4323791940227247565
+      TutKeyRow1_0: -1443609049544277827
+      TutKeyRow1_1: -7568040063856158109
+      TutKeyRow1_2: -2328626710857815254
+      TutKeyRow1_3: 3341109178915948663
+      TutKeyRow1_4: 9127464804288157918
+      TutKeyRow1_5: 4089010315854196614
+      TutKeyRow1_6: 764310618916812047
+      TutKeyRow1_7: -7787703753473223727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

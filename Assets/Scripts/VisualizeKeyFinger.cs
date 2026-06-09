@@ -43,13 +43,14 @@ public class VisualizeKeyFinger : MonoBehaviour
     [Header("Key Mappings")]
     public List<KeyFingerMapping> keyMappings; 
 /*
+
     void Start()
     {
         HideOverlay(); 
     }
 */
 //Can be used for testing. When pressing a key the corresponding key will be highlighted 
-
+/*
     void Update()
     {
         if (Keyboard.current == null) return;
@@ -69,7 +70,7 @@ public class VisualizeKeyFinger : MonoBehaviour
             }
         }
     } 
-
+*/
 
     //Hides the overlay
     public void HideOverlay()
