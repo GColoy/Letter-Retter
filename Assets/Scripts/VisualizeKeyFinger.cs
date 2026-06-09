@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 
 
 /// <summary>
-///Example Usage in other class: (The Keyboard must be dragged onto the corresponding field in the inspector)
+///Example Usage in other class: 
+/// First drag the prefab from the Assets/Prefabs folder into your hierarchie 
+/// Then the Keyboard prefab must be dragged onto the corresponding field in the inspector
 ///public VisualizeKeyFinger visualizer;
 ///void StarteTutorial()
 ///{

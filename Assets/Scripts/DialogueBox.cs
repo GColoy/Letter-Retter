@@ -7,7 +7,9 @@ using System;
 
 
 /// <summary>
-/// Example Usage in other class: (The DialogueBox must be dragged onto the corresponding field in the inspector)
+/// Example Usage in other class: 
+/// /// First drag the DialogueBoxSystem prefab from the Assets/Prefabs folder into your hierarchie 
+/// The DialogueBox (Not the DialogueBoxSystem but the DialogueBox) prefab must be dragged onto the corresponding field in the inspector
 /// public Dialogue dialogueBox; 
 /// void StartDialogue() 
 /// {
