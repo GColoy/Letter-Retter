@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 
 /// <summary>
-///Example Usage in other class: 
+///Example Usage in other class: (The Keyboard must be dragged onto the corresponding field in the inspector)
 ///public VisualizeKeyFinger visualizer;
 ///void StarteTutorial()
 ///{
@@ -21,6 +21,7 @@ using UnityEngine.InputSystem;
 
 public class VisualizeKeyFinger : MonoBehaviour
 {
+    public Dialogue dialogueBox; 
     public GameObject overlay;
     [Header("Hand Settings")]
     public Image handLeft; 
@@ -42,13 +43,15 @@ public class VisualizeKeyFinger : MonoBehaviour
 
     [Header("Key Mappings")]
     public List<KeyFingerMapping> keyMappings; 
-/*
 
     void Start()
     {
-        HideOverlay(); 
+        string[] text = {
+            "Hallo", 
+            "Test"
+        };
+        dialogueBox.Show(text); 
     }
-*/
 //Can be used for testing. When pressing a key the corresponding key will be highlighted 
 /*
     void Update()
