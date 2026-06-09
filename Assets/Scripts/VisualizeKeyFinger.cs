@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic; 
+using UnityEngine.InputSystem; 
 
 
 /// <summary>
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 ///public VisualizeKeyFinger visualizer;
 ///void StarteTutorial()
 ///{
-///  List<string> keys = new List<string> { "W", "A" };
+///  List<string> keys = new List<string> { "F", "J" };
 ///  visualizer.ShowKeys(keys);
 ///}
 ///void BeendeTutorial()
@@ -42,11 +43,33 @@ public class VisualizeKeyFinger : MonoBehaviour
     [Header("Key Mappings")]
     public List<KeyFingerMapping> keyMappings; 
 
-
     void Start()
     {
         HideOverlay(); 
     }
+
+//Can be used for testing. When pressing a key the corresponding key will be highlighted 
+/*
+    void Update()
+    {
+        if (Keyboard.current == null) return;
+        foreach (var mapping in keyMappings)
+        {
+             var control = Keyboard.current[mapping.key.ToLower()] as UnityEngine.InputSystem.Controls.KeyControl;
+            if (control != null)
+            {
+                if (control.wasPressedThisFrame)
+                {
+                    UpdateAppearance(mapping, true);
+                }
+                if (control.wasReleasedThisFrame)
+                {
+                    UpdateAppearance(mapping, false);
+                }
+            }
+        }
+    } 
+*/
 
     //Hides the overlay
     public void HideOverlay()
