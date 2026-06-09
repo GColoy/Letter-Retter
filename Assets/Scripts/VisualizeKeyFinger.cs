@@ -44,14 +44,7 @@ public class VisualizeKeyFinger : MonoBehaviour
     [Header("Key Mappings")]
     public List<KeyFingerMapping> keyMappings; 
 
-    void Start()
-    {
-        string[] text = {
-            "Hallo", 
-            "Test"
-        };
-        dialogueBox.Show(text); 
-    }
+
 //Can be used for testing. When pressing a key the corresponding key will be highlighted 
 /*
     void Update()
