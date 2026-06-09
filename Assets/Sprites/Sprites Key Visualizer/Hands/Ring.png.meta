@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 4d59984913d7f9048834a43ce5e245c3
+guid: 2a10d8bd3ec6a8c42969c603799eb7fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7513552691633544346
-    second: TutKeyFingersUnpressed_0
+      213: 4004708080983207187
+    second: Ring_0
   - first:
-      213: 9045363800550352106
-    second: TutKeyFingersUnpressed_1
+      213: -5400542443128171897
+    second: Ring_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,45 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TutKeyFingersUnpressed_0
+      name: Ring_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 0
-        width: 139
-        height: 179
+        x: 51
+        y: 17
+        width: 137
+        height: 161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 663a00ea2af7ab790800000000000000
-      internalID: -7513552691633544346
+      spriteID: 31de32428c4939730800000000000000
+      internalID: 4004708080983207187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TutKeyFingersUnpressed_1
+      name: Ring_1
       rect:
         serializedVersion: 2
-        x: 211
-        y: 0
-        width: 139
-        height: 179
+        x: 212
+        y: 17
+        width: 137
+        height: 161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae42bf3c376978d70800000000000000
-      internalID: 9045363800550352106
+      spriteID: 782dce2e24b6d05b0800000000000000
+      internalID: -5400542443128171897
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 13b0b65798c5ff14189c7cdec70154b0
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TutKeyFingersUnpressed_0: -7513552691633544346
-      TutKeyFingersUnpressed_1: 9045363800550352106
+      Ring_0: 4004708080983207187
+      Ring_1: -5400542443128171897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
