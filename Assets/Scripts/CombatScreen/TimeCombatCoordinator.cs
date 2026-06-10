@@ -56,6 +56,16 @@ namespace CombatScreen
             string typed = wordDetector.get_current_word();
             typingDisplay.displayProgress(typed);
             scoreDisplay.displayScore(WinScore, CurrentScore, StepSize, (float)allowedTime.TotalSeconds, (float)(allowedTime.TotalSeconds - spentTime.TotalSeconds), (float)((totalTimeSpent.TotalSeconds - HeadStart)/MaxTime));
+
+            if ((totalTimeSpent.TotalSeconds - HeadStart) / MaxTime > CurrentScore / WinScore)
+            {
+                Debug.Log("You LOST!!!");
+                totalTimeSpent = new TimeSpan();
+                CurrentScore = 0;
+                updateGoal();
+                return;
+            }
+
             if (typed == goal)
             {
                 CurrentScore += (float)(StepSize * Math.Clamp((allowedTime.TotalSeconds - spentTime.TotalSeconds) / allowedTime.TotalSeconds, 0, 1));
