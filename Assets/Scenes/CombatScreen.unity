@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e47d2f4993c193419bf3e005c4d7225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.TimedChallengeProvider
-  challengeProvider: {fileID: 1113685294}
+  challengeProvider: {fileID: 1113685292}
   secondsPerLetter: 0.5
 --- !u!114 &1113685297
 MonoBehaviour:
@@ -701,9 +701,9 @@ MonoBehaviour:
   wordDetector: {fileID: 1113685293}
   typingDisplay: {fileID: 883647049}
   scoreDisplay: {fileID: 2070399059}
-  WinScore: 10
-  CurrentScore: 0
-  StepSize: 1
+  ScorePerWord: 0.1
+  MaxTime: 20
+  HeadStart: 4
 --- !u!1 &1619699130
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.TimeScoreDisplay
   DoneProgress: {fileID: 412369847}
   PossibleProgress: {fileID: 1619699131}
-  FailedProgress: {fileID: 0}
+  FailedProgress: {fileID: 73288078}
 --- !u!212 &2070399060
 SpriteRenderer:
   serializedVersion: 2
