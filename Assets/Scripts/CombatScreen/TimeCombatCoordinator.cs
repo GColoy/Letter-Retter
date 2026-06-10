@@ -24,10 +24,13 @@ namespace CombatScreen
         [SerializeField] float WinScore = 10;
         [SerializeField] float CurrentScore = 0;
         [SerializeField] float StepSize = 1;
+        [SerializeField] float MaxTime = 20;
+        [SerializeField] float HeadStart = 4;
     
         string goal = "";
         TimeSpan allowedTime = new TimeSpan();
         TimeSpan spentTime = new TimeSpan();
+        TimeSpan totalTimeSpent = new TimeSpan();
 
         void Start()
         {
@@ -48,16 +51,18 @@ namespace CombatScreen
         void Update()
         {
             spentTime = spentTime.Add(TimeSpan.FromSeconds(Time.deltaTime));
+            totalTimeSpent = totalTimeSpent.Add(TimeSpan.FromSeconds(Time.deltaTime));
 
             string typed = wordDetector.get_current_word();
             typingDisplay.displayProgress(typed);
-            scoreDisplay.displayScore(WinScore, CurrentScore, StepSize, (float)allowedTime.TotalSeconds, (float)(allowedTime.TotalSeconds - spentTime.TotalSeconds));
+            scoreDisplay.displayScore(WinScore, CurrentScore, StepSize, (float)allowedTime.TotalSeconds, (float)(allowedTime.TotalSeconds - spentTime.TotalSeconds), (float)((totalTimeSpent.TotalSeconds - HeadStart)/MaxTime));
             if (typed == goal)
             {
                 CurrentScore += (float)(StepSize * Math.Clamp((allowedTime.TotalSeconds - spentTime.TotalSeconds) / allowedTime.TotalSeconds, 0, 1));
                 if (CurrentScore > WinScore)
                 {
                     Debug.Log("You WON!!!");
+                    totalTimeSpent = new TimeSpan();
                     CurrentScore = 0;
                 }
                 updateGoal();
