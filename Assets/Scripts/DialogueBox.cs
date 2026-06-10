@@ -30,8 +30,9 @@ public class Dialogue : MonoBehaviour
     public static event Action OnDialogueStarted; 
     public static event Action OnDialogueEnded; 
 
-    private int index; 
-    private Coroutine typingCoroutine; 
+    private int index;
+    private Coroutine typingCoroutine;
+    private IAfterDialogAction afterDialogAction;
 
     // Update is called once per frame
     void Update()
@@ -59,11 +60,18 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    public void Show(string[] text, IAfterDialogAction action)
+    {
+        Show(text);
+        afterDialogAction = action;
+    }
+
     //recieve Dialogue and start
     public void Show(string[] text)
     {
-        gameObject.SetActive(true); 
-        OnDialogueStarted?.Invoke(); 
+        gameObject.SetActive(true);
+        OnDialogueStarted?.Invoke();
+        afterDialogAction = null;
         lines = text;
         index = 0;
         if (typingCoroutine != null)
@@ -94,8 +102,9 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false); 
-            OnDialogueEnded?.Invoke(); 
+            gameObject.SetActive(false);
+            OnDialogueEnded?.Invoke();
+            afterDialogAction?.action();
         }
     }
 }
