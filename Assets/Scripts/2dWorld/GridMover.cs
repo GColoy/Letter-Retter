@@ -52,7 +52,7 @@ public class GridMover : MonoBehaviour
     private int   currentY;
     private bool  isMoving      = false;
     private float cooldownTimer = 0f;
-
+    private bool canMove = true; 
     // Tracks the current held direction so held keys keep moving
     private Vector2 heldDirection = Vector2.zero;
 
@@ -115,6 +115,8 @@ public class GridMover : MonoBehaviour
 
     void Update()
     {
+        if(!canMove) return; 
+
         // Tick cooldown
         if (cooldownTimer > 0f)
         {
@@ -136,6 +138,18 @@ public class GridMover : MonoBehaviour
             TryMove(0, dir.y > 0 ? 1 : -1);
     }
 
+    private void OnEnable()
+    {
+        Dialogue.OnDialogueStarted += DisableMovement;
+        Dialogue.OnDialogueEnded += EnableMovement;
+    }
+
+    private void OnDisable()
+    {
+        Dialogue.OnDialogueStarted -= DisableMovement;
+        Dialogue.OnDialogueEnded -= EnableMovement;
+    }
+
     // ── Movement ──────────────────────────────────────────────────────────────
 
     /// <summary>Attempts to move by (dx, dy) grid steps.</summary>
@@ -148,7 +162,9 @@ public class GridMover : MonoBehaviour
 
         // Blocked: out of bounds or occupied
         if (targetTile == null || targetTile.isOccupied)
+        {
             return;
+        }
 
         // Release current tile
         gridWorld.GetTile(currentX, currentY)?.Release();
@@ -186,6 +202,17 @@ public class GridMover : MonoBehaviour
         isMoving           = false;
         animator?.SetFloat("Speed", 0f); // idle
         cooldownTimer      = inputCooldown;
+    }
+
+    // ── Event-Handlers ──────────────────────────────────────────────────────────────
+    private void DisableMovement()
+    {
+        canMove = false;
+    }
+
+    private void EnableMovement()
+    {
+        canMove = true;
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────

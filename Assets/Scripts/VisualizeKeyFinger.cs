@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic; 
+using UnityEngine.InputSystem; 
 
 
 /// <summary>
 ///Example Usage in other class: 
+/// First drag the prefab from the Assets/Prefabs folder into your hierarchie 
+/// Then the Keyboard prefab must be dragged onto the corresponding field in the inspector
 ///public VisualizeKeyFinger visualizer;
 ///void StarteTutorial()
 ///{
-///  List<string> keys = new List<string> { "W", "A" };
+///  List<string> keys = new List<string> { "F", "J" };
 ///  visualizer.ShowKeys(keys);
 ///}
 ///void BeendeTutorial()
@@ -20,6 +23,7 @@ using System.Collections.Generic;
 
 public class VisualizeKeyFinger : MonoBehaviour
 {
+    public Dialogue dialogueBox; 
     public GameObject overlay;
     [Header("Hand Settings")]
     public Image handLeft; 
@@ -43,10 +47,28 @@ public class VisualizeKeyFinger : MonoBehaviour
     public List<KeyFingerMapping> keyMappings; 
 
 
-    void Start()
+//Can be used for testing. When pressing a key the corresponding key will be highlighted 
+/*
+    void Update()
     {
-        HideOverlay(); 
-    }
+        if (Keyboard.current == null) return;
+        foreach (var mapping in keyMappings)
+        {
+             var control = Keyboard.current[mapping.key.ToLower()] as UnityEngine.InputSystem.Controls.KeyControl;
+            if (control != null)
+            {
+                if (control.wasPressedThisFrame)
+                {
+                    UpdateAppearance(mapping, true);
+                }
+                if (control.wasReleasedThisFrame)
+                {
+                    UpdateAppearance(mapping, false);
+                }
+            }
+        }
+    } 
+*/
 
     //Hides the overlay
     public void HideOverlay()

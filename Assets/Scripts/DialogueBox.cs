@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic; 
 using UnityEngine;
 using TMPro; 
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
+using System;
 
 
 /// <summary>
 /// Example Usage in other class: 
+/// /// First drag the DialogueBoxSystem prefab from the Assets/Prefabs folder into your hierarchie 
+/// The DialogueBox (Not the DialogueBoxSystem but the DialogueBox) prefab must be dragged onto the corresponding field in the inspector
 /// public Dialogue dialogueBox; 
 /// void StartDialogue() 
 /// {
@@ -24,15 +27,11 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent; 
     public string[] lines; 
     public float textSpeed; 
+    public static event Action OnDialogueStarted; 
+    public static event Action OnDialogueEnded; 
 
     private int index; 
     private Coroutine typingCoroutine; 
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        gameObject.SetActive(false);
-    }
 
     // Update is called once per frame
     void Update()
@@ -64,6 +63,7 @@ public class Dialogue : MonoBehaviour
     public void Show(string[] text)
     {
         gameObject.SetActive(true); 
+        OnDialogueStarted?.Invoke(); 
         lines = text;
         index = 0;
         if (typingCoroutine != null)
@@ -95,6 +95,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false); 
+            OnDialogueEnded?.Invoke(); 
         }
     }
 }
