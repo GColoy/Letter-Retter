@@ -1,5 +1,4 @@
 using System;
-using System.ComponentModel.Design;
 using UnityEngine;
 
 namespace CombatScreen
@@ -11,6 +10,11 @@ namespace CombatScreen
     /// Hold the only gameplay logic in the folder — scoring, win/lose,
     /// timers, combos all belong here. See README.md for the full picture
     /// and how the three serialized references plug together.
+    ///
+    /// Everything the loop reasons about is kept as a normalized [0, 1]
+    /// ratio: <see cref="score"/> is progress toward the win, and the time
+    /// ratios are recomputed once at the top of <see cref="Update"/> so the
+    /// rest of the frame never has to divide by a duration again.
     /// </summary>
     class TimeCombatCoordinator : MonoBehaviour
     {
@@ -21,13 +25,13 @@ namespace CombatScreen
         /// <summary>Renders the goal and the player's progress on screen.</summary>
         [SerializeField] TypingDisplay typingDisplay;
         [SerializeField] TimeScoreDisplay scoreDisplay;
-        [SerializeField] float WinScore = 10;
-        [SerializeField] float CurrentScore = 0;
-        [SerializeField] float StepSize = 1;
+        /// <summary>Fraction of the bar gained for one word typed with full time to spare.</summary>
+        [SerializeField, Range(0, 1)] float ScorePerWord = 0.1f;
         [SerializeField] float MaxTime = 20;
         [SerializeField] float HeadStart = 4;
-    
+
         string goal = "";
+        float score = 0f;                          // progress toward the win, normalized to [0, 1]
         TimeSpan allowedTime = new TimeSpan();
         TimeSpan spentTime = new TimeSpan();
         TimeSpan totalTimeSpent = new TimeSpan();
@@ -47,36 +51,47 @@ namespace CombatScreen
             typingDisplay.initializeText(goal);
             wordDetector.new_word();
         }
-        
+
         void Update()
         {
             spentTime = spentTime.Add(TimeSpan.FromSeconds(Time.deltaTime));
             totalTimeSpent = totalTimeSpent.Add(TimeSpan.FromSeconds(Time.deltaTime));
 
+            // Boil the durations down to normalized ratios once, up front, so
+            // nothing below this line has to think in seconds again.
+            float timeLeftRatio = Mathf.Clamp01(1f - (float)(spentTime.TotalSeconds / allowedTime.TotalSeconds));
+            float failedProgress = Mathf.Clamp01((float)((totalTimeSpent.TotalSeconds - HeadStart) / MaxTime));
+            float possibleStep = ScorePerWord * timeLeftRatio;
+
             string typed = wordDetector.get_current_word();
             typingDisplay.displayProgress(typed);
-            scoreDisplay.displayScore(WinScore, CurrentScore, StepSize, (float)allowedTime.TotalSeconds, (float)(allowedTime.TotalSeconds - spentTime.TotalSeconds), (float)((totalTimeSpent.TotalSeconds - HeadStart)/MaxTime));
+            scoreDisplay.displayScore(score, possibleStep, failedProgress);
 
-            if ((totalTimeSpent.TotalSeconds - HeadStart) / MaxTime > CurrentScore / WinScore)
+            if (failedProgress > score)
             {
                 Debug.Log("You LOST!!!");
-                totalTimeSpent = new TimeSpan();
-                CurrentScore = 0;
-                updateGoal();
+                resetRound();
                 return;
             }
 
             if (typed == goal)
             {
-                CurrentScore += (float)(StepSize * Math.Clamp((allowedTime.TotalSeconds - spentTime.TotalSeconds) / allowedTime.TotalSeconds, 0, 1));
-                if (CurrentScore > WinScore)
+                score += possibleStep;
+                if (score > 1f)
                 {
                     Debug.Log("You WON!!!");
-                    totalTimeSpent = new TimeSpan();
-                    CurrentScore = 0;
+                    resetRound();
+                    return;
                 }
                 updateGoal();
             }
+        }
+
+        private void resetRound()
+        {
+            totalTimeSpent = new TimeSpan();
+            score = 0f;
+            updateGoal();
         }
     }
 

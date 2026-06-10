@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace CombatScreen
@@ -8,14 +7,17 @@ namespace CombatScreen
         [SerializeField] Transform DoneProgress;
         [SerializeField] Transform PossibleProgress;
         [SerializeField] Transform FailedProgress;
-        internal void displayScore(float winScore, float currentScore, float stepSize, float maxAddition, float currentAddition, float failedScore)
+        /// <summary>
+        /// Draws the three bars from already-normalized [0, 1] ratios:
+        /// <paramref name="doneProgress"/> is the locked-in progress,
+        /// <paramref name="possibleStep"/> is what the current word would add
+        /// on top of it, and <paramref name="failedProgress"/> is the chaser.
+        /// </summary>
+        internal void displayScore(float doneProgress, float possibleStep, float failedProgress)
         {
-            float doneProgress = Math.Clamp(currentScore / winScore, 0, 1);
-            float possibleProgress = Math.Clamp(doneProgress + (stepSize / winScore) * Math.Clamp(currentAddition / maxAddition, 0, 1), 0, 1);
-
-            setPosition(DoneProgress, doneProgress);
-            setPosition(PossibleProgress, possibleProgress);
-            setPosition(FailedProgress, Math.Clamp(failedScore, 0, 1));
+            setPosition(DoneProgress, Mathf.Clamp01(doneProgress));
+            setPosition(PossibleProgress, Mathf.Clamp01(doneProgress + possibleStep));
+            setPosition(FailedProgress, Mathf.Clamp01(failedProgress));
         }
 
         private void setPosition(Transform progressbar,float progress)
