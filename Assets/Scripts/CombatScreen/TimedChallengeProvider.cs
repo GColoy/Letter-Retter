@@ -6,6 +6,7 @@ namespace CombatScreen
     class TimedChallengeProvider : MonoBehaviour
     {
         [SerializeField] ChallengeProvider challengeProvider;
+        [SerializeField] float secondsPerLetter = 0.5f;
 
         string currentGoal = "";
 
@@ -21,7 +22,7 @@ namespace CombatScreen
 
         internal TimeSpan getCurrentTimeSpan()
         {
-            return TimeSpan.FromSeconds(currentGoal.Length * 0.5);
+            return TimeSpan.FromSeconds(currentGoal.Length * secondsPerLetter);
         }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace CombatScreen
@@ -7,43 +6,18 @@ namespace CombatScreen
     {
         [SerializeField] Transform DoneProgress;
         [SerializeField] Transform PossibleProgress;
-        internal void displayScore(float winScore, float currentScore, float stepSize, float maxAddition, float currentAddition)
+        [SerializeField] Transform FailedProgress;
+        /// <summary>
+        /// Draws the three bars from already-normalized [0, 1] ratios:
+        /// <paramref name="doneProgress"/> is the locked-in progress,
+        /// <paramref name="possibleStep"/> is what the current word would add
+        /// on top of it, and <paramref name="failedProgress"/> is the chaser.
+        /// </summary>
+        internal void displayScore(float doneProgress, float possibleStep, float failedProgress)
         {
-            float doneProgress = Math.Clamp(currentScore / winScore, 0, 1);
-            float possibleProgress = Math.Clamp(doneProgress + (stepSize / winScore) * Math.Clamp(currentAddition / maxAddition, 0, 1), 0, 1);
-
-            setPosition(DoneProgress, doneProgress);
-            setPosition(PossibleProgress, possibleProgress);
-        }
-
-        [ContextMenu("Preset/Empty")]
-        public void PresetEmpty()
-        {
-            displayScore(100f, 0f, 0.25f, 10, 0);
-        }
-
-        [ContextMenu("Preset/Quarter")]
-        public void PresetQuarter()
-        {
-            displayScore(100f, 25f, 0.25f, 10, 5);
-        }
-
-        [ContextMenu("Preset/Half")]
-        public void PresetHalf()
-        {
-            displayScore(100f, 50f, 0.25f, 10, 5);
-        }
-
-        [ContextMenu("Preset/Three Quarters")]
-        public void PresetThreeQuarters()
-        {
-            displayScore(100f, 75f, 0.25f, 10, 5);
-        }
-
-        [ContextMenu("Preset/Full")]
-        public void PresetFull()
-        {
-            displayScore(100f, 100f, 0.25f, 10, 10);
+            setPosition(DoneProgress, Mathf.Clamp01(doneProgress));
+            setPosition(PossibleProgress, Mathf.Clamp01(doneProgress + possibleStep));
+            setPosition(FailedProgress, Mathf.Clamp01(failedProgress));
         }
 
         private void setPosition(Transform progressbar,float progress)
