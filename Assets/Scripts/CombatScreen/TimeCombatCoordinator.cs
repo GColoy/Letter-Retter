@@ -16,7 +16,7 @@ namespace CombatScreen
     /// ratios are recomputed once at the top of <see cref="Update"/> so the
     /// rest of the frame never has to divide by a duration again.
     /// </summary>
-    class TimeCombatCoordinator : MonoBehaviour
+    class TimeCombatCoordinator : DelayedcombatCoordinator
     {
         /// <summary>Supplies the string the player must type next.</summary>
         [SerializeField] TimedChallengeProvider challengeProvider;
@@ -36,11 +36,6 @@ namespace CombatScreen
         TimeSpan spentTime = new TimeSpan();
         TimeSpan totalTimeSpent = new TimeSpan();
 
-        void Start()
-        {
-            updateGoal();
-        }
-
         private void updateGoal()
         {
             challengeProvider.genereateNextChallenge();
@@ -52,7 +47,18 @@ namespace CombatScreen
             wordDetector.new_word();
         }
 
-        void Update()
+        // Called by the base when a round (re)starts: wipe the run-long state
+        // and hand the player their first goal. activateCombat() runs this
+        // before the loop goes live, so there is no separate Start() to seed it.
+        public override void resetCombat()
+        {
+            totalTimeSpent = new TimeSpan();
+            score = 0f;
+            updateGoal();
+        }
+
+        // Driven by the base's Update() only while combat is active.
+        public override void updateCombat()
         {
             spentTime = spentTime.Add(TimeSpan.FromSeconds(Time.deltaTime));
             totalTimeSpent = totalTimeSpent.Add(TimeSpan.FromSeconds(Time.deltaTime));
@@ -69,8 +75,7 @@ namespace CombatScreen
 
             if (failedProgress > score)
             {
-                Debug.Log("You LOST!!!");
-                resetRound();
+                combatLost();
                 return;
             }
 
@@ -79,19 +84,11 @@ namespace CombatScreen
                 score += possibleStep;
                 if (score > 1f)
                 {
-                    Debug.Log("You WON!!!");
-                    resetRound();
+                    combatWon();
                     return;
                 }
                 updateGoal();
             }
-        }
-
-        private void resetRound()
-        {
-            totalTimeSpent = new TimeSpan();
-            score = 0f;
-            updateGoal();
         }
     }
 
