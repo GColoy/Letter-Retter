@@ -2,18 +2,13 @@ using UnityEngine;
 
 namespace CombatScreen
 {
-    public class TimeScoreDisplay : MonoBehaviour
+    public class TimeScoreDisplay : ScoreDisplay
     {
         [SerializeField] Transform DoneProgress;
         [SerializeField] Transform PossibleProgress;
         [SerializeField] Transform FailedProgress;
-        /// <summary>
-        /// Draws the three bars from already-normalized [0, 1] ratios:
-        /// <paramref name="doneProgress"/> is the locked-in progress,
-        /// <paramref name="possibleStep"/> is what the current word would add
-        /// on top of it, and <paramref name="failedProgress"/> is the chaser.
-        /// </summary>
-        internal void displayScore(float doneProgress, float possibleStep, float failedProgress)
+
+        internal override void displayScore(float doneProgress, float possibleStep, float failedProgress)
         {
             setPosition(DoneProgress, Mathf.Clamp01(doneProgress));
             setPosition(PossibleProgress, Mathf.Clamp01(doneProgress + possibleStep));

@@ -24,7 +24,7 @@ namespace CombatScreen
         [SerializeField] WordDetector wordDetector;
         /// <summary>Renders the goal and the player's progress on screen.</summary>
         [SerializeField] TypingDisplay typingDisplay;
-        [SerializeField] TimeScoreDisplay scoreDisplay;
+        [SerializeField] ScoreDisplay scoreDisplay;
         /// <summary>Fraction of the bar gained for one word typed with full time to spare.</summary>
         [SerializeField, Range(0, 1)] float ScorePerWord = 0.1f;
         [SerializeField] float MaxTime = 20;
@@ -45,6 +45,7 @@ namespace CombatScreen
 
             typingDisplay.initializeText(goal);
             wordDetector.new_word();
+            typingDisplay.displayProgress("");
         }
 
         // Called by the base when a round (re)starts: wipe the run-long state
@@ -54,7 +55,22 @@ namespace CombatScreen
         {
             totalTimeSpent = new TimeSpan();
             score = 0f;
+            scoreDisplay.displayScore(0, 1f, 1f);
             updateGoal();
+        }
+
+        // Polled by the base while the round is armed: the clock stays paused
+        // until the player has typed at least one character of the goal.
+        protected override bool hasStartedTyping()
+        {
+            return !string.IsNullOrEmpty(wordDetector.get_current_word());
+        }
+
+        // Toggle the combat interfaces so they only show during a live round.
+        protected override void setCombatInterfaceVisible(bool visible)
+        {
+            typingDisplay.gameObject.SetActive(visible);
+            scoreDisplay.gameObject.SetActive(visible);
         }
 
         // Driven by the base's Update() only while combat is active.

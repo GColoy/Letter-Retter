@@ -39,6 +39,9 @@ namespace CombatScreen
         /// <summary>Clear the buffer. Call when a challenge is solved.</summary>
         public void new_word()
         {
+            // Drain any raw keys still pending (e.g. typed during a dialog) so
+            // they don't leak into the fresh word.
+            typingDetector.get_latest_keys();
             current_word.Clear();
         }
     }
