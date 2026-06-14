@@ -30,11 +30,11 @@ namespace CombatScreen
         [SerializeField] float MaxTime = 20;
         [SerializeField] float HeadStart = 4;
 
-        string goal = "";
-        float score = 0f;                          // progress toward the win, normalized to [0, 1]
-        TimeSpan allowedTime = new TimeSpan();
-        TimeSpan spentTime = new TimeSpan();
-        TimeSpan totalTimeSpent = new TimeSpan();
+        [SerializeField] string goal = "";
+        [SerializeField] float score = 0f;                          // progress toward the win, normalized to [0, 1]
+        [SerializeField] TimeSpan allowedTime = new TimeSpan();
+        [SerializeField] TimeSpan spentTime = new TimeSpan();
+        [SerializeField] TimeSpan totalTimeSpent = new TimeSpan();
 
         private void updateGoal()
         {
@@ -45,6 +45,7 @@ namespace CombatScreen
 
             typingDisplay.initializeText(goal);
             wordDetector.new_word();
+            typingDisplay.displayProgress("");
         }
 
         // Called by the base when a round (re)starts: wipe the run-long state
@@ -54,7 +55,15 @@ namespace CombatScreen
         {
             totalTimeSpent = new TimeSpan();
             score = 0f;
+            scoreDisplay.displayScore(0, 1f, 1f);
             updateGoal();
+        }
+
+        // Polled by the base while the round is armed: the clock stays paused
+        // until the player has typed at least one character of the goal.
+        protected override bool hasStartedTyping()
+        {
+            return !string.IsNullOrEmpty(wordDetector.get_current_word());
         }
 
         // Driven by the base's Update() only while combat is active.
