@@ -24,7 +24,7 @@ namespace CombatScreen
         [SerializeField] WordDetector wordDetector;
         /// <summary>Renders the goal and the player's progress on screen.</summary>
         [SerializeField] TypingDisplay typingDisplay;
-        [SerializeField] TimeScoreDisplay scoreDisplay;
+        [SerializeField] ScoreDisplay scoreDisplay;
         /// <summary>Fraction of the bar gained for one word typed with full time to spare.</summary>
         [SerializeField, Range(0, 1)] float ScorePerWord = 0.1f;
         [SerializeField] float MaxTime = 20;

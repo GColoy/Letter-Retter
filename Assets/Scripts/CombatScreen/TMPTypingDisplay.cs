@@ -9,7 +9,7 @@ namespace CombatScreen
         public Color untypedColor;
         public Color correctlyTypedColor;
         public Color incorretlyTypedColor;
-        public TextMeshPro textMesh;
+        public TMP_Text textMesh;
         string originText;
 
         public override void initializeText(string text)
