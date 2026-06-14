@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4015b142e3d743a3a8dde5296f09568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridWorld
-  width: 30
-  height: 30
+  width: 10
+  height: 10
   tileSize: 1
   groundSprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   borderSprite: {fileID: 0}
@@ -344,7 +344,7 @@ MonoBehaviour:
   animator: {fileID: 791140727}
   startGridX: 5
   startGridY: 5
-  moveTime: 0.1
+  moveTime: 0.5
   inputCooldown: 0.05
   sortingOrder: 2
 --- !u!212 &791140723
@@ -396,12 +396,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 220715021686296392, guid: 811a604be12e52147a4e683c7c391d70, type: 3}
+  m_Sprite: {fileID: -8333488118588788241, guid: 1c1979345e8a8b44591975ee27b1854d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.24, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -459,8 +459,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.78, y: 2.41}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.5, y: 1.9375}
+    newSize: {x: 0.24, y: 0.31}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

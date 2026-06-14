@@ -182,6 +182,7 @@ public class GridMover : MonoBehaviour
 
         // Animate
         StartCoroutine(SlideTo(gridWorld.GridToWorld(currentX, currentY)));
+
     }
 
     /// <summary>Smoothly slides the object to the target world position.</summary>
@@ -200,6 +201,8 @@ public class GridMover : MonoBehaviour
 
         transform.position = target; // snap exactly on arrival
         isMoving           = false;
+        animator?.SetFloat("MoveX", 0f);
+        animator?.SetFloat("MoveY", 0f);
         animator?.SetFloat("Speed", 0f); // idle
         cooldownTimer      = inputCooldown;
     }
