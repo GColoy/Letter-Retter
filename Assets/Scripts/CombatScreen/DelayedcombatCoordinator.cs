@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CombatScreen
 {
@@ -58,8 +59,10 @@ namespace CombatScreen
             combatActive = false;
             resetCombat();
             setCombatInterfaceVisible(false);
-            string[] text = {"Congratulations You Won", "Lets train some more", "Click to start the next round"};
-            dialogue.Show(text, this);
+            
+            SceneManager.LoadScene("WonFight");
+            //string[] text = {"Congratulations You Won", "Lets train some more", "Click to start the next round"};
+            //dialogue.Show(text, this);
         }
 
         public void action()

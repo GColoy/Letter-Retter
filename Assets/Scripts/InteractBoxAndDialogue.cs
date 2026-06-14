@@ -113,6 +113,14 @@ public class InteractBoxAndDialogue : MonoBehaviour
                                 ));
                             }));
                         break;
+                    case "FJCharAfterWon":
+                        textToShow = LoadDialog("FJAfterWon");
+                        dialogue.Show(textToShow, new ActionAfterDialog(() =>
+                            {
+                                SceneManager.LoadScene("EndScreen");
+                            }));
+                        break;
+                        break;
                     default:
                         textToShow = new string[0];
                         break;
@@ -130,6 +138,7 @@ public class InteractBoxAndDialogue : MonoBehaviour
             case "FJplusEnemy1": return data.FJplusEnemy1;
             case "FJplusEnemy2": return data.FJplusEnemy2;
             case "FJplusEnemy3": return data.FJplusEnemy3;
+            case "FJAfterWon": return data.FJAfterWon;
             // add more cases as needed
             default: return null;
         }
@@ -147,6 +156,7 @@ public class DialogCollection {
     public string[] FJplusEnemy1;
     public string[] FJplusEnemy2;
     public string[] FJplusEnemy3;
+    public string[] FJAfterWon;
     public string[] enemyone;
     // add more fields for other keys
 }
