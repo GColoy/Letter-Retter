@@ -5,8 +5,8 @@ namespace CombatScreen
     abstract class DelayedcombatCoordinator : MonoBehaviour, IAfterDialogAction
     {
         [SerializeField] public Dialogue dialogue;
-        [SerializeField] private bool combatActive = false;
-        [SerializeField] private bool awaitingFirstKey = false;
+        private bool combatActive = false;
+        private bool awaitingFirstKey = false;
 
         public void activateCombat()
         {

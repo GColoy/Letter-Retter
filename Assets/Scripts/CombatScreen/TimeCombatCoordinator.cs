@@ -30,11 +30,11 @@ namespace CombatScreen
         [SerializeField] float MaxTime = 20;
         [SerializeField] float HeadStart = 4;
 
-        [SerializeField] string goal = "";
-        [SerializeField] float score = 0f;                          // progress toward the win, normalized to [0, 1]
-        [SerializeField] TimeSpan allowedTime = new TimeSpan();
-        [SerializeField] TimeSpan spentTime = new TimeSpan();
-        [SerializeField] TimeSpan totalTimeSpent = new TimeSpan();
+        string goal = "";
+        float score = 0f;                          // progress toward the win, normalized to [0, 1]
+        TimeSpan allowedTime = new TimeSpan();
+        TimeSpan spentTime = new TimeSpan();
+        TimeSpan totalTimeSpent = new TimeSpan();
 
         private void updateGoal()
         {
