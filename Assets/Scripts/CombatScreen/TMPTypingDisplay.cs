@@ -10,6 +10,7 @@ namespace CombatScreen
         public Color correctlyTypedColor;
         public Color incorretlyTypedColor;
         public TMP_Text textMesh;
+        public char spaceReplacement = '·';
         string originText;
 
         public override void initializeText(string text)
@@ -28,9 +29,10 @@ namespace CombatScreen
             string richText = "";
             for (int i = 0; i < originText.Length; i++)
             {
-                if (i >= typedText.Length) richText += $"<color=#{untypedColor.ToHexString()}>{originText[i]}";
-                else if (originText[i] == typedText[i]) richText += $"<color=#{correctlyTypedColor.ToHexString()}>{originText[i]}";
-                else richText += $"<color=#{incorretlyTypedColor.ToHexString()}>{originText[i]}";
+                char displayChar = originText[i] == ' ' ? spaceReplacement : originText[i];
+                if (i >= typedText.Length) richText += $"<color=#{untypedColor.ToHexString()}>{displayChar}";
+                else if (originText[i] == typedText[i]) richText += $"<color=#{correctlyTypedColor.ToHexString()}>{displayChar}";
+                else richText += $"<color=#{incorretlyTypedColor.ToHexString()}>{displayChar}";
             }
             return richText;
         }
