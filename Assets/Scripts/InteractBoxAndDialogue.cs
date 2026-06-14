@@ -67,6 +67,10 @@ public class InteractBoxAndDialogue : MonoBehaviour
         {
             if (interact.ReadValue<float>() > 0f)
             {
+                if(eBox != null)
+                {
+                    eBox.SetActive(false);
+                }
                 string nameOfChar =  gameObject.name;
                 string[] textToShow = null;
                 switch (nameOfChar)
