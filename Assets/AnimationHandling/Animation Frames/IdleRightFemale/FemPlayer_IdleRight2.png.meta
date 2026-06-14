@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 811a604be12e52147a4e683c7c391d70
+guid: 08ee6310ee5650148a92fca284a9fd23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 220715021686296392
-    second: frame_0_delay-0.1s_0
+      213: -4248709258776532035
+    second: FemPlayer_IdleRight2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frame_0_delay-0.1s_0
+      name: FemPlayer_IdleRight2_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 0
-        width: 178
-        height: 241
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 1
+        width: 19
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84f44309423201300800000000000000
-      internalID: 220715021686296392
+      spriteID: dbb26b4907d8905c0800000000000000
+      internalID: -4248709258776532035
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6e90775d38bbaf34dbe0f89fe6ecdf13
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      frame_0_delay-0.1s_0: 220715021686296392
+      FemPlayer_IdleRight2_0: -4248709258776532035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
