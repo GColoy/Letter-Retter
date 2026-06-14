@@ -66,6 +66,13 @@ namespace CombatScreen
             return !string.IsNullOrEmpty(wordDetector.get_current_word());
         }
 
+        // Toggle the combat interfaces so they only show during a live round.
+        protected override void setCombatInterfaceVisible(bool visible)
+        {
+            typingDisplay.gameObject.SetActive(visible);
+            scoreDisplay.gameObject.SetActive(visible);
+        }
+
         // Driven by the base's Update() only while combat is active.
         public override void updateCombat()
         {
