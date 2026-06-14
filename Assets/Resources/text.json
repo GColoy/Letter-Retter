@@ -1,0 +1,34 @@
+{ 
+    "enterkey":
+    [
+        "Enter: 'Hallo, wer ist da?'", 
+        "Enter; 'Ah du bist es, Gott sei Dank, dass du mich gefunden hast. Ein Bug hat unser System ueberfallen und alle Buchstaben geklaut!'",
+        "Enter: 'Ich konnte ihm entkommen,vermutlich weil ich so gross bin.'",
+        "Enter: 'Zusammen koennen wir die anderen Tasten zurueckerobern. Ich habe gesehen, dass der Bug ein paar Buchstaben verloren hat.'",
+        "Enter: 'Lass sie uns zurückholen! Geh rechts durch die Tür.'"
+    ],
+    "FJplusEnemy1":
+    [
+        "Enter: 'Da sind sie ja, F und J, die zentralen Tasten auf deiner Tastatur! Mit den beiden hast du direkt zwei maechtige Werkzeuge gefunden.'",
+        "F&J: 'Hallo Enter. Du konntest auch entkommen? Wir haben uns an einander festgehalten.'",
+        "F&J: 'Dadurch waren wir wahrscheinlich zu gross und der Bug hat uns irgendwann verloren.'",
+        "F&J: 'Und du musst unser Meister sein.'"
+    ],
+    "FJplusEnemy2":
+    [
+        "F&J: 'Du findest uns auf deiner Tastatur mittig. Wir sind die Fixpunkte aller Tasten.'",
+        "Du erkennst uns blind an den fuehlbaren Erhebungen. Benutze F mit deinem linken Zeigefinger und J mit dem rechten Zeigefinger."
+    ],
+    "FJplusEnemy3":
+    [
+        "Gegner: 'Ah, F und J hier seid Ihr. Mein Meister schickt mich um nach euch zu suchen. Und wer bist du?'",
+        "Enter: 'Uns hast du die Buchstaben geklaut, du fieser Halunke. Gib sie wieder her!'",
+        "Gegner (lacht): 'Sie zurueckgeben? Dann haetten wir sie ja gar nicht erst stehlen muessen.'",
+        "Entertaste (fluestert): 'Wir sollte ihn Angreifen. Mit F und J haben wir gute Chancen.'"
+    ],
+    "enemyone":
+    [
+        "Test",
+        "Bla"
+    ]
+}
