@@ -331,4 +331,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   textComponent: {fileID: 635081999137251351}
   lines: []
-  textSpeed: 0.2
+  textSpeed: 0.03
