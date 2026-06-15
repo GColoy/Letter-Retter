@@ -28,7 +28,7 @@ namespace CombatScreen
         void Start()
         {
             setCombatInterfaceVisible(false);
-            string[] text = {"You need to outtype your enemy (the red bar). Remember to correct any errors you made.", "It counts after you start typing"};
+            string[] text = {"Du musst schneller tippen als dein Gegner (der rote Balken). Denk daran, alle Fehler zu korrigieren, die du gemacht hast.", "Die Zeit laeuft, sobald du anfaengst zu tippen."};
             dialogue.Show(text, this);
         }
 
@@ -49,7 +49,7 @@ namespace CombatScreen
             combatActive = false;
             resetCombat();
             setCombatInterfaceVisible(false);
-            string[] text = {"Sorry You Lost", "Lets try again", "Click for a rematch!"};
+            string[] text = {"Du hast leider verloren.", "Versuche es erneut!"};
             dialogue.Show(text, this);
         }
 
@@ -60,7 +60,7 @@ namespace CombatScreen
             resetCombat();
             setCombatInterfaceVisible(false);
             
-            string[] text = {"Congratualations you won", "You will be brought back now!"};
+            string[] text = {"Du hast gewonnen! Der Kampf ist vorbei"};
             dialogue.Show(text, new ActionAfterDialog(() => {SceneManager.LoadScene("WonFight");}));
             
             //dialogue.Show(text, this);
