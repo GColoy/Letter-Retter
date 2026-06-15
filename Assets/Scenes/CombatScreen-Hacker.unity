@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 1068947962}
   - component: {fileID: 1068947961}
   m_Layer: 0
-  m_Name: Bob-Battle
+  m_Name: Hacker-Battle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -940,7 +940,7 @@ Animator:
   m_GameObject: {fileID: 1068947960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 06e4b86454f86d848aacd59aaaf7562e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 70484ba2cbaa3a131999c5176b9b23fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1001,7 +1001,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3470270640621890037, guid: e536168fb1db8434388fbc0668002331, type: 3}
+  m_Sprite: {fileID: 5789453568806670074, guid: ba112b27dc10b5913a3bb205a147ff44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.TimeCombatCoordinator
   dialogue: {fileID: 1420051930}
-  winScene: WonFight
+  winScene: 
   challengeProvider: {fileID: 1113685296}
   wordDetector: {fileID: 1113685293}
   typingDisplay: {fileID: 82558035}
@@ -1206,12 +1206,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1113685288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe28605e102f2dd7f8d2776805594202, type: 3}
+  m_Script: {fileID: 11500000, guid: acb7e4b016ed095178b426a9173adce1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.RandomLetterChallengeProvider
-  alphabet: dfjk
-  minStringLength: 3
-  maxStringLength: 8
+  m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.BossChallengeProvider
+  resourceName: bossText
 --- !u!1 &1135205393
 GameObject:
   m_ObjectHideFlags: 0
