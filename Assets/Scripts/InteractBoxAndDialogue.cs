@@ -120,7 +120,6 @@ public class InteractBoxAndDialogue : MonoBehaviour
                                 SceneManager.LoadScene("EndScreen");
                             }));
                         break;
-                        break;
                     default:
                         textToShow = new string[0];
                         break;
