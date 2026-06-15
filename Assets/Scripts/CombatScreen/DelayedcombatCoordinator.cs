@@ -28,7 +28,7 @@ namespace CombatScreen
         void Start()
         {
             setCombatInterfaceVisible(false);
-            string[] text = {"Lets start the combat", "It counts after you start typing"};
+            string[] text = {"Lets start the combat. Remember to correct any errors you made!", "It counts after you start typing"};
             dialogue.Show(text, this);
         }
 
@@ -49,7 +49,7 @@ namespace CombatScreen
             combatActive = false;
             resetCombat();
             setCombatInterfaceVisible(false);
-            string[] text = {"Sorry You Lost", "Lets try again", "click to start the next round"};
+            string[] text = {"Sorry You Lost", "Lets try again", "Click for a rematch!"};
             dialogue.Show(text, this);
         }
 
@@ -60,8 +60,9 @@ namespace CombatScreen
             resetCombat();
             setCombatInterfaceVisible(false);
             
-            SceneManager.LoadScene("WonFight");
-            //string[] text = {"Congratulations You Won", "Lets train some more", "Click to start the next round"};
+            string[] text = {"Congratualations you won", "You will be brought back now!"};
+            dialogue.Show(text, new ActionAfterDialog(() => {SceneManager.LoadScene("WonFight");}));
+            
             //dialogue.Show(text, this);
         }
 
