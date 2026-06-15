@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e47d2f4993c193419bf3e005c4d7225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.TimedChallengeProvider
-  challengeProvider: {fileID: 0}
+  challengeProvider: {fileID: 1113685298}
   secondsPerLetter: 0.8
 --- !u!114 &1113685297
 MonoBehaviour:
@@ -1206,10 +1206,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1113685288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acb7e4b016ed095178b426a9173adce1, type: 3}
+  m_Script: {fileID: 11500000, guid: fe28605e102f2dd7f8d2776805594202, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.BossChallengeProvider
-  resourceName: bossText
+  m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.RandomLetterChallengeProvider
+  alphabet: dfjk
+  minStringLength: 3
+  maxStringLength: 8
 --- !u!1 &1135205393
 GameObject:
   m_ObjectHideFlags: 0
