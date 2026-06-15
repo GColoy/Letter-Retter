@@ -976,12 +976,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1113685290}
-  - component: {fileID: 1113685294}
   - component: {fileID: 1113685293}
-  - component: {fileID: 1113685292}
   - component: {fileID: 1113685295}
   - component: {fileID: 1113685297}
   - component: {fileID: 1113685296}
+  - component: {fileID: 1113685298}
   m_Layer: 0
   m_Name: CombatCoordinator
   m_TagString: Untagged
@@ -1004,24 +1003,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1113685292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113685288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d19d4614dd01ac8209f5ec3b32842dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.WordListChallangeProvider
-  ChallengeList:
-  - origins
-  - of
-  - the
-  - cosmic
-  - swamp
 --- !u!114 &1113685293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,21 +1016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.WordDetector
   typingDetector: {fileID: 1113685295}
---- !u!114 &1113685294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113685288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe28605e102f2dd7f8d2776805594202, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.RandomLetterChallangeProvider
-  alphabet: dfjk
-  minStringLength: 3
-  maxStringLength: 8
 --- !u!114 &1113685295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e47d2f4993c193419bf3e005c4d7225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.TimedChallengeProvider
-  challengeProvider: {fileID: 1113685294}
+  challengeProvider: {fileID: 1113685298}
   secondsPerLetter: 0.8
 --- !u!114 &1113685297
 MonoBehaviour:
@@ -1096,6 +1062,19 @@ MonoBehaviour:
   ScorePerWord: 0.1
   MaxTime: 40
   HeadStart: 8
+--- !u!114 &1113685298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113685288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb7e4b016ed095178b426a9173adce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.BossChallengeProvider
+  resourceName: bossText
 --- !u!114 &1420051930 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1344282044276670798, guid: c5d15affafab7a8498209ee40246870c, type: 3}
