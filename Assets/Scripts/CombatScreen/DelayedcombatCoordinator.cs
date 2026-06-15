@@ -28,7 +28,7 @@ namespace CombatScreen
         void Start()
         {
             setCombatInterfaceVisible(false);
-            string[] text = {"Lets start the combat. Remember to correct any errors you made!", "It counts after you start typing"};
+            string[] text = {"Lets start the combat. Remember to correct any errors you made!", "You need to outtype your enemy (the red bar)", "It counts after you start typing"};
             dialogue.Show(text, this);
         }
 
