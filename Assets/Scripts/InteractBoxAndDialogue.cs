@@ -107,7 +107,13 @@ public class InteractBoxAndDialogue : MonoBehaviour
                                         string[] textToShow3 = LoadDialog("FJplusEnemy3");
                                         dialogue.Show(textToShow3, new ActionAfterDialog(() =>
                                             {
-                                                SceneManager.LoadScene("CombatScreen");
+                                                List<string> keys2 = new List<string> { "D", "K" };
+                                                keyboard.ShowKeys(keys2);
+                                                string[] textToShow4 = LoadDialog("FJplusEnemy4");
+                                                dialogue.Show(textToShow4, new ActionAfterDialog(() =>
+                                                {
+                                                    SceneManager.LoadScene("CombatScreen");
+                                                }));
                                             }));
                                     }
                                 ));
@@ -137,6 +143,7 @@ public class InteractBoxAndDialogue : MonoBehaviour
             case "FJplusEnemy1": return data.FJplusEnemy1;
             case "FJplusEnemy2": return data.FJplusEnemy2;
             case "FJplusEnemy3": return data.FJplusEnemy3;
+            case "FJplusEnemy4": return data.FJplusEnemy4;
             case "FJAfterWon": return data.FJAfterWon;
             // add more cases as needed
             default: return null;
@@ -155,6 +162,7 @@ public class DialogCollection {
     public string[] FJplusEnemy1;
     public string[] FJplusEnemy2;
     public string[] FJplusEnemy3;
+    public string[] FJplusEnemy4;
     public string[] FJAfterWon;
     public string[] enemyone;
     // add more fields for other keys

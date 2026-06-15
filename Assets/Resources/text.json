@@ -25,7 +25,13 @@
         "Enter: 'Uns hast du die Buchstaben geklaut, du fieser Halunke. Gib sie wieder her!'",
         "Gegner (lacht): 'Sie zurueckgeben? Dann haetten wir sie ja gar nicht erst stehlen muessen.'",
         "Entertaste (fluestert): 'Wir sollten ihn angreifen und beweisen, dass du auch mit D & K umgehen kannst.'",
-        "Entertaste (fluestert): 'F und J werden dich beim Kampf unterstützen.'"
+        "Entertaste (fluestert): 'F und J werden dich beim Kampf unterstuetzen.'"
+    ],
+    "FJplusEnemy4":
+    [
+        "D&K: 'Hilfe!!! Rette uns!!!",
+        "D&K: 'Du kannst unsere Kraefte mit deinen Mittelfingern aktivieren.'",
+        "D&K: 'Wir glauben an dich.'"
     ],
     "FJAfterWon":
     [
