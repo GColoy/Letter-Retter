@@ -173,6 +173,7 @@ MonoBehaviour:
   correctlyTypedColor: {r: 0.30980393, g: 0.69803923, b: 0.2784314, a: 1}
   incorretlyTypedColor: {r: 1, g: 0.30588236, b: 0.30588236, a: 1}
   textMesh: {fileID: 82558036}
+  spaceReplacement: 183
 --- !u!114 &82558036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,7 +819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe28605e102f2dd7f8d2776805594202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.RandomLetterChallangeProvider
-  alphabet: abcdefghijklmnopqrstuvwxyz
+  alphabet: dfjk
+  minStringLength: 3
+  maxStringLength: 8
 --- !u!114 &1113685295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,8 +846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e47d2f4993c193419bf3e005c4d7225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.TimedChallengeProvider
-  challengeProvider: {fileID: 1113685292}
-  secondsPerLetter: 0.5
+  challengeProvider: {fileID: 1113685294}
+  secondsPerLetter: 0.8
 --- !u!114 &1113685297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,8 +866,8 @@ MonoBehaviour:
   typingDisplay: {fileID: 82558035}
   scoreDisplay: {fileID: 808054216}
   ScorePerWord: 0.1
-  MaxTime: 20
-  HeadStart: 4
+  MaxTime: 40
+  HeadStart: 8
 --- !u!114 &1420051930 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1344282044276670798, guid: c5d15affafab7a8498209ee40246870c, type: 3}
