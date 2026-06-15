@@ -53,7 +53,7 @@ namespace CombatScreen
             dialogue.Show(text, this);
         }
 
-        protected void combatWon()
+        public void combatWon()
         {
             awaitingFirstKey = false;
             combatActive = false;
