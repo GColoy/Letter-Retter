@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatScreen.TimeCombatCoordinator
   dialogue: {fileID: 1420051930}
-  winScene: 
+  winScene: WonFight
   challengeProvider: {fileID: 1113685296}
   wordDetector: {fileID: 1113685293}
   typingDisplay: {fileID: 82558035}

@@ -6,6 +6,7 @@ namespace CombatScreen
     abstract class DelayedcombatCoordinator : MonoBehaviour, IAfterDialogAction
     {
         [SerializeField] public Dialogue dialogue;
+        [SerializeField] private string winScene;
         private bool combatActive = false;
         private bool awaitingFirstKey = false;
 
@@ -61,7 +62,7 @@ namespace CombatScreen
             setCombatInterfaceVisible(false);
             
             string[] text = {"Du hast gewonnen! Der Kampf ist vorbei"};
-            dialogue.Show(text, new ActionAfterDialog(() => {SceneManager.LoadScene("WonFight");}));
+            dialogue.Show(text, new ActionAfterDialog(() => {SceneManager.LoadScene(winScene);}));
             
             //dialogue.Show(text, this);
         }
