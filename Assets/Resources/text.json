@@ -26,6 +26,12 @@
         "Gegner (lacht): 'Sie zurueckgeben? Dann haetten wir sie ja gar nicht erst stehlen muessen.'",
         "Entertaste (fluestert): 'Wir sollte ihn Angreifen. Mit F und J haben wir gute Chancen.'"
     ],
+    "FJAfterWon":
+    [
+        "Enter: 'Wow, das hast du toll gemacht.",
+        "Enter: 'Leider befindest du dich hier in einer Demo, deshalb trennen sich hier unsere Wege.'",
+        "F&J: 'Ich hoffe wir sehen uns bald wieder!'"
+    ],
     "enemyone":
     [
         "Test",
