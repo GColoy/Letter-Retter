@@ -38,7 +38,13 @@ public class Dialogue : MonoBehaviour
     void Update()
     {
         //if Left Mousebutton is pressed skip to next line or finish the current one 
-        if(Mouse.current.leftButton.wasPressedThisFrame)
+        var kb = Keyboard.current; 
+        bool advance = Mouse.current.leftButton.wasPressedThisFrame
+                || (kb != null && kb.enterKey.wasPressedThisFrame)
+                || (kb != null && kb.numpadEnterKey.wasPressedThisFrame)
+                || (kb != null && kb.spaceKey.wasPressedThisFrame);
+
+        if (advance)
         {
             if (lines == null || lines.Length == 0) 
             {
