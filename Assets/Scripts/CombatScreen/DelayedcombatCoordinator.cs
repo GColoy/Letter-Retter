@@ -12,6 +12,7 @@ namespace CombatScreen
 
         public void activateCombat()
         {
+            AudioManager.Instance.Play("combat");
             resetCombat();
             // Arm the round but hold the clock: combat only goes live once the
             // player types their first key, reported via hasStartedTyping().
@@ -56,6 +57,7 @@ namespace CombatScreen
 
         public void combatWon()
         {
+            AudioManager.Instance.Play("main");
             awaitingFirstKey = false;
             combatActive = false;
             resetCombat();
