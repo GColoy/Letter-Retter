@@ -11,6 +11,7 @@ public class InteractBoxAndDialogue : MonoBehaviour
     public InputAction interact;
     public GameObject door;
     public VisualizeKeyFinger keyboard;
+    public Animator animator;
     //private string[] textToShow = {"Test", "Bla"};
     private bool isInRange;
     SceneChanger sceneChanger = new SceneChanger();
@@ -126,6 +127,34 @@ public class InteractBoxAndDialogue : MonoBehaviour
                                 SceneManager.LoadScene("EndScreen");
                             }));
                         break;
+                    case "EnterKeyExplainSkip":
+                        textToShow = LoadDialog("EnterExplainSkip");
+                        dialogue.Show(textToShow, new ActionAfterDialog(() =>
+                            {
+                                if (door != null) door.SetActive(true);
+                            }));
+                        break;
+                    case "DoorToEndFight":
+                        SceneManager.LoadScene("HackerConfrontation");
+                        break;
+                    case "Hacker":
+                        string[] hackerPreLaugth = LoadDialog("HackerPreLaugh");
+                        string[] hackerWhileLaught = LoadDialog("HackerWhileLaugh");
+                        string[] hackerPostLaught = LoadDialog("HackerPostLaugh");
+                        dialogue.Show(hackerPreLaugth, new ActionAfterDialog(() =>
+                        {
+                            animator.SetBool("laughing", true);
+                            dialogue.Show(hackerWhileLaught, new ActionAfterDialog(() =>
+                            {
+                                animator.SetBool("laughing", false);
+                                dialogue.Show(hackerPostLaught, new ActionAfterDialog(() =>
+                                {
+                                    SceneManager.LoadScene("CombatScreen-Hacker");
+                                }));
+                            }));
+                        }));
+                        break;
+                    
                     default:
                         textToShow = new string[0];
                         break;
@@ -145,6 +174,10 @@ public class InteractBoxAndDialogue : MonoBehaviour
             case "FJplusEnemy3": return data.FJplusEnemy3;
             case "FJplusEnemy4": return data.FJplusEnemy4;
             case "FJAfterWon": return data.FJAfterWon;
+            case "EnterExplainSkip": return data.EnterExplainSkip;
+            case "HackerPreLaugh": return data.HackerPreLaugh;
+            case "HackerWhileLaugh": return data.HackerWhileLaugh;
+            case "HackerPostLaugh": return data.HackerPostLaugh;
             // add more cases as needed
             default: return null;
         }
@@ -165,6 +198,10 @@ public class DialogCollection {
     public string[] FJplusEnemy4;
     public string[] FJAfterWon;
     public string[] enemyone;
+    public string[] EnterExplainSkip;
+    public string[] HackerPreLaugh;
+    public string[] HackerWhileLaugh;
+    public string[] HackerPostLaugh;
     // add more fields for other keys
 }
 

@@ -43,5 +43,29 @@
     [
         "Test",
         "Bla"
+    ],
+    "EnterExplainSkip":
+    [
+        "Enter: 'Stark gekaempft! Normalerweise wuerdest du jetzt alle Tasten Reihe fuer Reihe trainieren.'",
+        "Enter: 'Aber das hier ist nur eine Demo, deshalb ueberspringen wir den langen Lernteil.'",
+        "Enter: 'Ich habe die Spur des Diebes verfolgt. Hinter der naechsten Tuer wartet der Drahtzieher hinter allem: der Hacker.'",
+        "Enter: 'Sei vorsichtig und geh durch die Tuer, wenn du bereit bist.'"
+    ],
+    "HackerPreLaugh":
+    [
+        "Hacker: 'Na sieh mal einer an. Die kleine Entertaste und ihr neuer Meister.'",
+        "Hacker: 'Ich bin es, der eure kostbaren Buchstaben gestohlen hat. Jeden einzelnen davon.'",
+        "Hacker: 'Und ihr glaubt allen Ernstes, ausgerechnet IHR koenntet mich aufhalten?'"
+    ],
+    "HackerWhileLaugh":
+    [
+        "Hacker: 'HAHAHAHA!'",
+        "Hacker: 'Wie suess. Wirklich zum Totlachen!'"
+    ],
+    "HackerPostLaugh":
+    [
+        "Hacker: 'Genug gelacht. Wenn du deine geliebten Buchstaben zurueck willst, dann nimm sie dir doch.'",
+        "Hacker: 'Tipp schneller als ich, oder verschwinde fuer immer aus meinem System!'",
+        "Enter (fluestert): 'Bleib ruhig und konzentrier dich. Wir schaffen das gemeinsam!'"
     ]
 }

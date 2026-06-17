@@ -9,17 +9,26 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/2dworldwalk.unity
-    guid: f705b7c7b27034aa4ac8ea5e4b06e374
+    path: Assets/Scenes/FIrstScene.unity
+    guid: 14ef10aa8336ad04f846d5bebeb67d21
   - enabled: 1
-    path: Assets/Scenes/CombatScreen.unity
-    guid: 632ee495ec050be59abcb3e12a3826b9
+    path: Assets/Scenes/StartScene.unity
+    guid: 241263e8351b44737a99aebcc19e2f1a
   - enabled: 1
     path: Assets/Scenes/FJFinding.unity
     guid: e091715f33478554d9938d4aab035980
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
+    path: Assets/Scenes/CombatScreen.unity
+    guid: 632ee495ec050be59abcb3e12a3826b9
+  - enabled: 1
+    path: Assets/Scenes/TransitionEndFight.unity
     guid: ffe2bfe636c1766409fd01f13f17c25a
+  - enabled: 1
+    path: Assets/Scenes/HackerConfrontation.unity
+    guid: 4ea1eb927a31d422ab7a2e0bed8d8d15
+  - enabled: 1
+    path: Assets/Scenes/CombatScreen-Hacker.unity
+    guid: e82cdb212841ea37bac4d79544706c53
   - enabled: 1
     path: Assets/Scenes/WonFight.unity
     guid: 6ea83bcee7d7c254194457ee3bc71b92
@@ -27,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EndScreen.unity
     guid: 440e6e6b05547b842898cd3854d3b0d0
   - enabled: 1
-    path: Assets/Scenes/FIrstScene.unity
-    guid: 14ef10aa8336ad04f846d5bebeb67d21
+    path: Assets/Scenes/2dworldwalk.unity
+    guid: f705b7c7b27034aa4ac8ea5e4b06e374
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
