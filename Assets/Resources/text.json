@@ -53,19 +53,17 @@
     ],
     "HackerPreLaugh":
     [
-        "Hacker: 'Na sieh mal einer an. Die kleine Entertaste und ihr neuer Meister.'",
-        "Hacker: 'Ich bin es, der eure kostbaren Buchstaben gestohlen hat. Jeden einzelnen davon.'",
-        "Hacker: 'Und ihr glaubt allen Ernstes, ausgerechnet IHR koenntet mich aufhalten?'"
+        "Hacker: 'Du hast hast es schneller zu mir geschaft als ich erwartet habe.'",
+        "Hacker: 'Aber du hast keine Chance gegen MICH!'"
     ],
     "HackerWhileLaugh":
     [
         "Hacker: 'HAHAHAHA!'",
-        "Hacker: 'Wie suess. Wirklich zum Totlachen!'"
+        "Hacker: 'Ich freue mich schon dir deine hart erkämpften Buchstaben alle wieder ab zu nehmen.'"
     ],
     "HackerPostLaugh":
     [
-        "Hacker: 'Genug gelacht. Wenn du deine geliebten Buchstaben zurueck willst, dann nimm sie dir doch.'",
-        "Hacker: 'Tipp schneller als ich, oder verschwinde fuer immer aus meinem System!'",
-        "Enter (fluestert): 'Bleib ruhig und konzentrier dich. Wir schaffen das gemeinsam!'"
+        "Hacker: 'Also willst du mir zeigen was du drauf hast?'",
+        "Hacker: 'Ich kann es kaum erwarten dich zu besiegen!'"
     ]
 }
