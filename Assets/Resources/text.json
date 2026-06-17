@@ -21,9 +21,9 @@
     ],
     "FJplusEnemy3":
     [
-        "Gegner: 'Ah, F und J, hier seid Ihr. Mein Meister schickt mich, um nach euch zu suchen. Und wer bist du?'",
+        "Bob: 'Ah, F und J, hier seid Ihr. Mein Meister schickt mich, um nach euch zu suchen. Und wer bist du?'",
         "Enter: 'Uns hast du die Buchstaben geklaut, du fieser Halunke. Gib sie wieder her!'",
-        "Gegner (lacht): 'Sie zurueckgeben? Dann haetten wir sie ja gar nicht erst stehlen muessen.'",
+        "Bob (lacht): 'Sie zurueckgeben? Dann haetten wir sie ja gar nicht erst stehlen muessen.'",
         "Entertaste (fluestert): 'Wir sollten ihn angreifen und beweisen, dass du auch mit D & K umgehen kannst.'",
         "Entertaste (fluestert): 'F und J werden dich beim Kampf unterstuetzen.'"
     ],
@@ -53,8 +53,10 @@
     ],
     "HackerPreLaugh":
     [
-        "Hacker: 'Du hast es schneller zu mir geschaft als ich erwartet habe.'",
-        "Hacker: 'Aber du hast keine Chance gegen MICH!'"
+        "Hacker: 'Aeh... wieso bist du denn schon hier? Du solltest doch viel laenger brauchen'",
+        "Enter: 'Weil das hier nur die Demo ist, zurueck zum Skript!'",
+        "Hacker (raeuspert sich): 'Nun gut...Na wen haben wir denn da!'",
+        "Der Stoerenfried der meine ganze Arbeit zunichte macht. Aber du hast keine Chance gegen MICH!'"
     ],
     "HackerWhileLaugh":
     [
@@ -64,6 +66,6 @@
     "HackerPostLaugh":
     [
         "Hacker: 'Also willst du mir zeigen, was du drauf hast?'",
-        "Hacker: 'Ich kann es kaum erwarten, dich zu besiegen!'"
+        "Hacker: 'Ich kann es kaum erwarten, dich endlich zu besiegen!'"
     ]
 }

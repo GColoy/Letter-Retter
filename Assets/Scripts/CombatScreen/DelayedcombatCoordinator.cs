@@ -7,12 +7,14 @@ namespace CombatScreen
     {
         [SerializeField] public Dialogue dialogue;
         [SerializeField] private string winScene;
+        [SerializeField] private string firstResponse = "Du hast gewonnen! Der Kampf ist vorbei";
+        [SerializeField] private string secondResponse;
         private bool combatActive = false;
         private bool awaitingFirstKey = false;
 
         public void activateCombat()
         {
-            AudioManager.Instance.Play("combat");
+            
             resetCombat();
             // Arm the round but hold the clock: combat only goes live once the
             // player types their first key, reported via hasStartedTyping().
@@ -29,6 +31,7 @@ namespace CombatScreen
 
         void Start()
         {
+            AudioManager.Instance.Play("combat");
             setCombatInterfaceVisible(false);
             string[] text = {"Du musst schneller tippen als dein Gegner (der rote Balken). Denk daran, alle Fehler zu korrigieren, die du gemacht hast.", "Die Zeit laeuft, sobald du anfaengst zu tippen."};
             dialogue.Show(text, this);
@@ -57,15 +60,14 @@ namespace CombatScreen
 
         public void combatWon()
         {
-            AudioManager.Instance.Play("main");
             awaitingFirstKey = false;
             combatActive = false;
             resetCombat();
             setCombatInterfaceVisible(false);
             
-            string[] text = {"Du hast gewonnen! Der Kampf ist vorbei"};
-            dialogue.Show(text, new ActionAfterDialog(() => {SceneManager.LoadScene(winScene);}));
-            
+            string[] text = {firstResponse, secondResponse};
+            dialogue.Show(text, new ActionAfterDialog(() => { SceneManager.LoadScene(winScene); AudioManager.Instance.Play("main"); }));
+
             //dialogue.Show(text, this);
         }
 
